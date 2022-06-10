@@ -1,7 +1,7 @@
 {
-  "name": "News-1_1",
+  "name": "News-1_2",
   "version": "1.0.0",
-  "description": "News-1_1",
+  "description": "News-1_2",
   "main": "index.js",
   "scripts": {
     "watch-sass": "node-sass sass/style.scss css/style.css -w",
