@@ -1,0 +1,85 @@
+//body style
+.page {
+  display: grid;
+  grid-template-rows: [img-start] 25vh [img-end navbar-start] 10vh [navbar-end header-start] min-content [header-end] repeat(
+      3,
+      [col-start] min-content [col-end]
+    );
+  grid-template-columns:
+    [full-start] minmax(6rem, 1fr) repeat(
+      4,
+      [col-start] minmax(min-content, 45rem) [col-end]
+    )
+    minmax(6rem, 1fr) [full-end];
+  grid-column-gap: $margin-top;
+}
+
+// img desk
+.img-desk {
+  grid-row: img-start / img-end;
+  grid-column: full-start / full-end;
+  width: 100%;
+  height: 100%;
+  background-size: 100%;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+// all btn
+.btn {
+  outline: none;
+  border: none;
+  padding: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 0.2rem 1rem $box-shadow-015;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+  background-color: $color-green;
+  color: $color-gray-light;
+  font-size: 2rem;
+  font-family: $font--main;
+
+  height: 5rem;
+  width: max-content;
+  &:hover {
+    box-shadow: 0 0.8rem 1rem $box-shadow-015;
+    transform: translatey(-3px);
+    color: $color-white;
+  }
+  &:focus {
+    box-shadow: 0 0.4rem 0.4rem rgba($color-black, 0.2);
+    transform: translatey(-1px);
+  }
+}
+
+// header img
+.header__img {
+  grid-row: header-start / header-end;
+  grid-column: col-start 2 / col-end 3;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  object-fit: cover;
+  background-position: top;
+  border-radius: 4px;
+  box-shadow: $box-shadow-def;
+  margin-top: $margin-top;
+}
+
+// footer
+.footer {
+  grid-column: full-start / full-end;
+  grid-row: col-start 4 / col-end 4;
+  height: 5rem;
+  margin-top: $margin-top;
+  text-align: center;
+  background-color: $color-blue-dark;
+  align-self: center;
+  padding: 1rem 0;
+  &__copyright {
+    font-size: 2rem;
+    font-family: $font--header;
+    color: $color-white;
+  }
+}

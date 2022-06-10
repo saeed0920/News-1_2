@@ -1,0 +1,54 @@
+.gallery {
+  grid-row: col-start 3 / col-end 3;
+  grid-column: col-start 1 / col-end 4;
+  height: 70rem;
+
+  border-radius: 4px;
+  box-shadow: $box-shadow-def;
+  margin-top: $margin-top;
+  background: linear-gradient(
+    to top right,
+    rgba($color-blue-dark, 0.8),
+    rgba($color-green, 0.6)
+  );
+
+  &__btn {
+  }
+
+  &-container {
+    position: relative;
+    & > *:hover ~ *:not(:hover) {
+      transform: scale(0.9);
+    }
+    & > * {
+      transition: all 0.2s;
+      outline-offset: 0.6rem;
+      position: absolute;
+      width: 30%;
+      box-shadow: $box-shadow-def;
+      &:hover {
+        transform: scale(1.1) translateY(-3px);
+        outline: 1rem rgba($color-green, 0.7) solid;
+        outline-style: inset;
+        box-shadow: 0 2rem 2rem rgba($color-black, 0.3);
+        z-index: 5;
+      }
+    }
+
+    &-1 {
+      left: 27%;
+      top: 24rem;
+      z-index: 2;
+    }
+    &-2 {
+      z-index: 3;
+      right: 23%;
+      top: 14rem;
+    }
+    &-3 {
+      z-index: 4;
+      top: 2rem;
+      left: 43rem;
+    }
+  }
+}

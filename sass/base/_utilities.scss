@@ -1,0 +1,91 @@
+/* uniti css */
+.font-sml {
+  font-size: smaller;
+}
+.font-nl {
+  font: medium;
+}
+.font-lg {
+  font-size: xx-large;
+}
+.font-llg {
+  font-size: 7rem;
+}
+.font-family-lato {
+  font-family: "Lato", sans-serif;
+}
+.font-size-rem {
+  font-size: 1.5rem !important;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.background-telegram {
+  background: #00dcdc;
+}
+
+.img-size-position {
+  background-size: cover;
+  background-position: top;
+}
+
+.u-center-text {
+  text-align: center;
+}
+.u-margin-bot-big {
+  margin-bottom: 5rem !important;
+}
+.u-margin-bot-med {
+  margin-bottom: 2rem !important;
+}
+.u-margin-bot-small {
+  margin-bottom: 16px !important;
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
+.u-margin-top-small {
+  margin-top: 1rem !important;
+}
+.u-margin-top-med {
+  margin-top: 3rem !important;
+  @include res(tab-small) {
+    margin-top: 2rem !important;
+  }
+}
+.u-margin-top-2rem {
+  margin-top: 2rem !important;
+}
+.u-margin-top-big {
+  margin-top: 5rem !important;
+  @include res(tab-small) {
+    margin-top: 3rem !important;
+  }
+}
+.u-margin-top-hige {
+  margin-top: 7rem !important;
+  @include res(tab-small) {
+    margin-top: 5rem !important;
+  }
+}
+
+.u-font-size-2rem {
+  font-size: 2rem;
+}
+.u-padding-2rem {
+  padding: 2rem;
+}
+
+.u-dispaly-inline-block {
+  display: inline-block;
+}
+.position-re {
+  position: relative !important;
+}
+.position-ab {
+  position: absolute !important;
+}

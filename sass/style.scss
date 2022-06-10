@@ -1,0 +1,19 @@
+//? @import
+// @import abstracts folder
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+// @import bass folder
+@import "base/animations";
+@import "base/typography";
+@import "base/base";
+@import "base/utilities";
+
+// @import componets folder
+@import "componets/navbar";
+@import "componets/news";
+@import "componets/gallery";
+
+// @import pages folder
+@import "pages/home";
