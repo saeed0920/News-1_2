@@ -1,12 +1,13 @@
 //body style
 .page {
   display: grid;
-  grid-template-rows: [img-start] 25vh [img-end navbar-start] 10vh [navbar-end header-start] min-content [header-end] repeat(
+  grid-template-rows: [img-start] 25vh [img-end header-start] min-content [header-end] repeat(
       3,
       [col-start] min-content [col-end]
     );
   grid-template-columns:
-    [full-start] minmax(6rem, 1fr) repeat(
+    [navbar-start]8rem
+    [navbar-end full-start] minmax(6rem, 1fr) repeat(
       4,
       [col-start] minmax(min-content, 45rem) [col-end]
     )
@@ -15,15 +16,25 @@
 }
 
 // img desk
-.img-desk {
+.header-main {
   grid-row: img-start / img-end;
   grid-column: full-start / full-end;
-  width: 100%;
-  height: 100%;
-  background-size: 100%;
-  object-fit: cover;
-  background-repeat: no-repeat;
-  background-position: top;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__img {
+    border-radius: 50%;
+  }
+  & h1 {
+    margin-right: $margin-top;
+    font-size: 7rem;
+    font-family: $font--header;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to left, $color-green, $color-blue-dark);
+  }
 }
 
 // all btn
