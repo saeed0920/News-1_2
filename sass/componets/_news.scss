@@ -1,22 +1,22 @@
 .news {
   // last news
   &__last {
-    grid-row: header-start / header-end;
+    grid-row: col-start 1 / col-end 1;
     grid-column: col-start 1 / col-end 1;
   }
 
   &__shire {
-    grid-row: header-start / header-end;
+    grid-row: col-start 1 / col-end 1;
     grid-column: col-start 4 / col-end 4;
   }
 
   &__best {
-    grid-row: col-start 1 / col-end 1;
+    grid-row: header-start / header-end;
     grid-column: col-start 1 / col-end 3;
   }
 
   &__notif {
-    grid-row: col-start 1 / col-end 1;
+    grid-row: header-start / header-end;
     grid-column: col-start 4 / col-end 4;
   }
   // items eash news-box

@@ -70,7 +70,7 @@
 
 // header img
 .header__img {
-  grid-row: header-start / header-end;
+  grid-row: col-start 1 / col-end 1;
   grid-column: col-start 2 / col-end 3;
   background-size: cover;
   background-repeat: no-repeat;
