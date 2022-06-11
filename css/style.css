@@ -42,7 +42,7 @@ big-desktop
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    background-image: linear-gradient(to left, #52ab98, #2b6777); }
+    background-image: linear-gradient(to left, #408ec6, #1e2761); }
 
 .btn {
   outline: none;
@@ -52,7 +52,7 @@ big-desktop
   box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.15);
   cursor: pointer;
   transition: all 0.2s ease-in;
-  background-color: #52ab98;
+  background-color: #7a2048;
   color: #f2f2f2;
   font-size: 2rem;
   font-family: font-main;
@@ -84,7 +84,7 @@ big-desktop
   height: 5rem;
   margin-top: 4rem;
   text-align: center;
-  background-color: #2b6777;
+  background-color: #1e2761;
   align-self: center;
   padding: 1rem 0; }
   .footer__copyright {
@@ -223,7 +223,7 @@ body {
   padding: 2rem 0rem;
   width: 12.5rem;
   height: 100%;
-  background-color: #2b6777;
+  background-color: #1e2761;
   position: fixed;
   top: 0;
   right: 0;
@@ -244,7 +244,7 @@ body {
     .navbar-box__link, .navbar-box__link:visited, .navbar-box__link:link {
       text-decoration: none;
       font-family: font-header;
-      color: #52ab98;
+      color: #7a2048;
       font-size: 2rem;
       color: #fff;
       padding: 2rem 3rem;
@@ -252,7 +252,7 @@ body {
       .navbar-box__link:hover, .navbar-box__link:visited:hover, .navbar-box__link:link:hover {
         transform: scale(1.1);
         backface-visibility: hidden;
-        background-color: #52ab98;
+        background-color: #7a2048;
         color: #f2f2f2; }
 
 .news__last {
@@ -279,14 +279,14 @@ body {
   justify-content: center;
   justify-items: center;
   align-items: center;
-  border-top: 3px solid #52ab98;
+  border-top: 3px solid #7a2048;
   margin-top: 4rem;
   padding: 0 1rem; }
   .news__box__h1 {
     grid-column: 1 / 2;
     justify-self: flex-start;
     font-size: 2.5rem;
-    color: #2b6777;
+    color: #1e2761;
     font-family: font-header; }
   .news__box__btn {
     grid-column: 3 / 4; }
@@ -329,7 +329,7 @@ body {
         .news__box__container .box .text-box a {
           text-decoration: none;
           font-family: font-header;
-          color: #52ab98;
+          color: #7a2048;
           font-size: 1.5rem; }
 
 .news__best {
@@ -342,13 +342,13 @@ body {
   box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.15);
   transition: all 0.2s;
   backface-visibility: hidden;
-  border-top: 3px solid #52ab98;
+  border-top: 3px solid #7a2048;
   margin-top: 4rem;
   grid-gap: 2rem;
   padding: 2rem 1rem; }
   .news__best__h1 {
     font-size: 2.5rem;
-    color: #2b6777;
+    color: #1e2761;
     font-family: font-header;
     justify-self: flex-start; }
   .news__best__btn {
@@ -392,11 +392,11 @@ body {
       .news__best__container .text-box a {
         text-decoration: none;
         font-family: font-header;
-        color: #52ab98;
+        color: #7a2048;
         font-size: 1.5rem; }
 
 .news__notif {
-  border-top: 3px solid #52ab98;
+  border-top: 3px solid #7a2048;
   margin-top: 4rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -405,7 +405,7 @@ body {
   padding: 2rem 1rem; }
   .news__notif h1 {
     font-size: 2.5rem;
-    color: #2b6777;
+    color: #1e2761;
     font-family: font-header;
     grid-column: 1 / 2; }
   .news__notif__btn {
@@ -437,7 +437,7 @@ body {
     .news__notif__container a {
       text-decoration: none;
       font-family: font-header;
-      color: #52ab98;
+      color: #7a2048;
       font-size: 1.5rem; }
 
 .gallery {
@@ -447,7 +447,7 @@ body {
   border-radius: 4px;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
   margin-top: 4rem;
-  background: linear-gradient(to top right, rgba(43, 103, 119, 0.8), rgba(82, 171, 152, 0.6)); }
+  background: linear-gradient(to top right, rgba(30, 39, 97, 0.8), rgba(122, 32, 72, 0.6)); }
   .gallery-container {
     position: relative; }
     .gallery-container > *:hover ~ *:not(:hover) {
@@ -460,7 +460,7 @@ body {
       box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15); }
       .gallery-container > *:hover {
         transform: scale(1.1) translateY(-3px);
-        outline: 1rem rgba(82, 171, 152, 0.7) solid;
+        outline: 1rem rgba(122, 32, 72, 0.7) solid;
         outline-style: inset;
         box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.3);
         z-index: 5; }

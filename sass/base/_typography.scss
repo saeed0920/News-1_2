@@ -33,7 +33,11 @@
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    background-image: linear-gradient(to left, $color-green, $color-blue-dark);
+    background-image: linear-gradient(
+      to left,
+      $color-blue-light,
+      $color-blue-dark
+    );
   }
 }
 
