@@ -1,0 +1,89 @@
+.link-pages {
+  display: grid;
+  grid-template-rows: [img-start] 25vh [img-end] repeat(
+      4,
+      [col-start] max-content [col-end]
+    );
+  grid-template-columns:
+    [navbar-start] 8rem
+    [navbar-end full-start] minmax(6rem, 10rem) repeat(
+      3,
+      [col-start] minmax(min-content, 1fr) [col-end]
+    )
+    minmax(6rem, 10rem) [full-end];
+  grid-column-gap: $margin-top;
+
+  @include res(900) {
+    grid-template-rows: [img-start] 15rem [img-end] repeat(
+        4,
+        [col-start] max-content [col-end]
+      );
+    grid-template-columns:
+      [navbar-start] 8rem
+      [navbar-end full-start] minmax(2rem, 5rem) repeat(
+        3,
+        [col-start] minmax(min-content, 1fr) [col-end]
+      )
+      minmax(2rem, 5rem) [full-end];
+    grid-column-gap: 2rem;
+  }
+  &--main-section {
+    grid-row: col-start 1 / col-end 3;
+    grid-column: col-start 1 / col-end 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include news;
+    padding: 1rem;
+
+    @include res(1400) {
+      grid-column: col-start 1 / col-end 3;
+      grid-row: col-start 1 / col-end 3;
+    }
+
+    &__header {
+      @include header;
+      color: $color-green;
+      font-size: 3rem;
+      @include res(900) {
+        font-size: 2.5rem;
+      }
+    }
+    &__text {
+      padding: 2rem;
+      font-size: 2.5rem;
+      font-family: $font--text;
+      text-align: right;
+      @include res(1400) {
+        padding: 3rem;
+      }
+      @include res(900) {
+        padding: 2rem;
+        font-size: 2rem;
+      }
+    }
+    &__img {
+      width: 80%;
+      align-self: center;
+      border-radius: 4px;
+      box-shadow: $box-shadow-def;
+      outline-offset: 0.6rem;
+      transition: all 0.2s ease-out;
+      &:hover {
+        transform: scale(1.01);
+        outline: 0.5rem rgba($color-green, 0.7) solid;
+        outline-style: inset;
+      }
+    }
+  }
+
+  &--last-news {
+    grid-row: col -start 1 / col-end 1;
+    grid-column: col-start 3 / col-end 3;
+    @include res(1400) {
+      justify-self: center;
+      grid-column: col-start 1 / col-end 3;
+      grid-row: col-start 4 / col-end 4;
+    }
+  }
+}

@@ -30,6 +30,18 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  @include res(1400) {
+    font-size: 55%;
+  }
+  @include res(1230) {
+    font-size: 50%;
+  }
+  @include res(900) {
+    font-size: 46%;
+  }
+  @include res(600) {
+    font-size: 44%;
+  }
 }
 
 body {
@@ -38,5 +50,8 @@ body {
 }
 
 ::selection {
-// todo : style selecion and scroll 
+  background-color: $color-blue-light;
+  color: $color-white;
 }
+
+// todo : style selecion and scroll

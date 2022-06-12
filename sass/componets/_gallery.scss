@@ -12,6 +12,11 @@
     rgba($color-green, 0.6)
   );
 
+  @include res(1400) {
+    grid-row: col-start 5 / col-end 5;
+    grid-column: col-start 1 / col-end 3;
+  }
+
   &__btn {
   }
 

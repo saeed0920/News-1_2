@@ -1,5 +1,5 @@
 //body style
-.page {
+.main-page {
   display: grid;
   grid-template-rows: [img-start] 25vh [img-end header-start] min-content [header-end] repeat(
       3,
@@ -13,6 +13,45 @@
     )
     minmax(6rem, 1fr) [full-end];
   grid-column-gap: $margin-top;
+
+  @include res(1400) {
+    grid-template-rows: [img-start] 18rem [img-end header-start] min-content [header-end] repeat(
+        4,
+        [col-start] min-content [col-end]
+      );
+    grid-template-columns:
+      [navbar-start]8rem
+      [navbar-end full-start] minmax(4rem, 1fr) repeat(
+        3,
+        [col-start] minmax(min-content, 45rem) [col-end]
+      )
+      minmax(4rem, 1fr) [full-end];
+  }
+  @include res(1230) {
+    grid-template-columns:
+      [navbar-start]8rem
+      [navbar-end full-start] minmax(1rem, 1fr) repeat(
+        3,
+        [col-start] minmax(min-content, 45rem) [col-end]
+      )
+      minmax(1rem, 1fr) [full-end];
+    padding-right: 2rem;
+    grid-column-gap: 2rem;
+  }
+  @include res(900) {
+    grid-template-rows: [img-start] 12rem [img-end header-start] min-content [header-end] repeat(
+        6,
+        [col-start] min-content [col-end]
+      );
+  }
+  @include res(500) {
+    grid-template-columns:
+      [navbar-start navbar-end full-start] minmax(1rem, 1fr) repeat(
+        3,
+        [col-start] minmax(min-content, 45rem) [col-end]
+      )
+      minmax(1rem, 1fr) [full-end];
+  }
 }
 
 // img desk
@@ -22,9 +61,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
+  padding: 2rem;
+  padding-bottom: 0;
   &__img {
     border-radius: 50%;
+    width: 25rem;
+    @include res(1100) {
+      width: 18rem;
+    }
+    @include res(900) {
+      width: 14rem;
+    }
+    @include res(600) {
+      width: 12rem;
+    }
   }
   & h1 {
     margin-right: $margin-top;
@@ -38,6 +88,15 @@
       $color-blue-light,
       $color-blue-dark
     );
+    @include res(1100) {
+      font-size: 5rem;
+    }
+    @include res(900) {
+      font-size: 4rem;
+    }
+    @include res(600) {
+      font-size: 3rem;
+    }
   }
 }
 
@@ -80,18 +139,34 @@
   border-radius: 4px;
   box-shadow: $box-shadow-def;
   margin-top: $margin-top;
+
+  @include res(1400) {
+    grid-row: col-start 3 / col-end 3;
+    grid-column: col-start 1 / col-end 3;
+  }
+  @include res(1100) {
+    grid-column: col-start 1 / col-end 2;
+  }
+  @include res(900) {
+    grid-row: col-start 1 / col-end 1;
+    grid-column: col-start 1 / col-end 3;
+  }
 }
 
 // footer
 .footer {
   grid-column: full-start / full-end;
   grid-row: col-start 4 / col-end 4;
+
   height: 5rem;
   margin-top: $margin-top;
   text-align: center;
   background-color: $color-blue-dark;
   align-self: center;
   padding: 1rem 0;
+  @include res(1400) {
+    grid-row: col-start 6 / col-end 6;
+  }
   &__copyright {
     font-size: 2rem;
     font-family: $font--header;

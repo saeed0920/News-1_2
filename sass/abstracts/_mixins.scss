@@ -86,3 +86,43 @@ big-desktop
     }
   }
 }
+
+// custom res
+
+@mixin res($res) {
+  @if $res == 500 {
+    @media only screen and (max-width: 31.25em) {
+      @content;
+    }
+  }
+  @if $res == 600 {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    }
+  }
+  @if $res == 900 {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    }
+  }
+  @if $res == 1100 {
+    @media only screen and (max-width: 68.75em) {
+      @content;
+    }
+  }
+  @if $res == 1230 {
+    @media only screen and (max-width: 76.875em) {
+      @content;
+    }
+  }
+  @if $res == 1400 {
+    @media only screen and (max-width: 87.5em) {
+      @content;
+    }
+  }
+  @if $res == 1600 {
+    @media only screen and (max-width: 100em) {
+      @content;
+    }
+  }
+}
