@@ -27,6 +27,20 @@
       minmax(2rem, 5rem) [full-end];
     grid-column-gap: 2rem;
   }
+  @include res(500) {
+    grid-template-rows: [img-start] 15rem [img-end] repeat(
+        4,
+        [col-start] max-content [col-end]
+      );
+    grid-template-columns:
+      [full-start] minmax(1rem, 2rem) repeat(
+        3,
+        [col-start] minmax(min-content, 1fr) [col-end]
+      )
+      minmax(1rem, 2rem) [full-end];
+    grid-column-gap: 1rem;
+  }
+
   &--main-section {
     grid-row: col-start 1 / col-end 3;
     grid-column: col-start 1 / col-end 2;
@@ -60,6 +74,9 @@
       @include res(900) {
         padding: 2rem;
         font-size: 2rem;
+      }
+      @include res(400) {
+        padding: 2rem 0;
       }
     }
     &__img {
