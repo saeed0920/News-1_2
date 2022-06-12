@@ -17,13 +17,35 @@
   z-index: 20;
   box-shadow: -1rem 1rem 1rem rgba($color-black, 0.2);
   transition: all 0.3s ease-out;
+
+  @include res(500) {
+    transform: scalex(0);
+    transform-origin: right;
+    padding-top: 2rem;
+    width: 20rem;
+  }
+
   &:hover {
     width: 15rem;
+    @include res(500) {
+      width: 20rem;
+    }
   }
+
+  &-box:hover ~ .navbar-hover {
+    width: 100% !important;
+    & > * {
+      visibility: visible;
+    }
+  }
+
   &__img {
     width: 85%;
     transition: all 0.2s;
     background-size: cover;
+    @include res(500) {
+      width: 15rem;
+    }
   }
 
   &-box {
@@ -50,6 +72,48 @@
     }
   }
   &__btn {
-    // margin-right: 2rem;
+  }
+
+  .navbar-hover {
+    &:hover {
+      width: 100% !important;
+      & > * {
+        visibility: visible;
+      }
+    }
+
+    width: 0 !important;
+    & > * {
+      visibility: hidden;
+    }
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 4px;
+    height: max-content;
+    width: 15rem; //************
+    background-color: $color-blue-light;
+    @include position-center;
+    justify-content: center;
+    z-index: 15;
+    transition: width 0.2s 0.2s;
+
+    &__link {
+      @include link;
+      &,
+      &:visited,
+      &:link {
+        @include link;
+        font-family: $font--text;
+        font-size: 1.8rem;
+        color: $color-white;
+        padding: 1rem 2rem;
+        transition: color 0.2s, visibility 0.1s 0.4s;
+        &:hover {
+          color: $color-blue-dark;
+        }
+      }
+    }
   }
 }

@@ -51,6 +51,13 @@
         [col-start] minmax(min-content, 45rem) [col-end]
       )
       minmax(1rem, 1fr) [full-end];
+    padding: 0;
+  }
+  @include res(400) {
+    grid-template-rows: [img-start] 15rem [img-end header-start] min-content [header-end] repeat(
+        6,
+        [col-start] min-content [col-end]
+      );
   }
 }
 
@@ -63,6 +70,10 @@
   align-items: center;
   padding: 2rem;
   padding-bottom: 0;
+  @include res(400) {
+    padding: 0;
+    flex-direction: column;
+  }
   &__img {
     border-radius: 50%;
     width: 25rem;
@@ -74,6 +85,9 @@
     }
     @include res(600) {
       width: 12rem;
+    }
+    @include res(400) {
+      width: 10rem;
     }
   }
   & h1 {
@@ -167,9 +181,83 @@
   @include res(1400) {
     grid-row: col-start 6 / col-end 6;
   }
+
   &__copyright {
     font-size: 2rem;
     font-family: $font--header;
     color: $color-white;
+    @include res(400) {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+/// checkbox
+.checkbox {
+  display: none;
+
+  &__btn {
+    display: none;
+    @include res(500) {
+      display: flex;
+    }
+    cursor: pointer;
+    position: fixed;
+    top: 4rem;
+    right: 2rem;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    box-shadow: $box-shadow-def;
+    background-color: $color-gray-light;
+    align-items: center;
+    justify-content: center;
+    z-index: 30;
+    transition: all 0.2s;
+    & span {
+      position: relative;
+      width: 3rem;
+      height: 1px;
+      background-color: $color-green;
+      transition: all 0.2s;
+      display: inline-block;
+      &::after,
+      &::before {
+        content: "";
+        transition: all 0.2s;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        right: 0;
+        background-color: $color-green;
+        transform-origin: center;
+      }
+
+      &::after {
+        bottom: 1rem;
+      }
+      &::before {
+        top: 1rem;
+      }
+    }
+  }
+
+  &:checked:checked ~ .checkbox__btn {
+    & span {
+      background-color: transparent;
+
+      &::after {
+        transform: rotate(-135deg);
+        top: 0;
+      }
+      &::before {
+        transform: rotate(135deg);
+        top: 0;
+      }
+    }
+  }
+
+  &:checked:checked ~ .navbar {
+    transform: scaleX(1);
   }
 }

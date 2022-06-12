@@ -42,6 +42,9 @@ html {
   @include res(600) {
     font-size: 44%;
   }
+  @include res(400) {
+    font-size: 42%;
+  }
 }
 
 body {

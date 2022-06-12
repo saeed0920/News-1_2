@@ -89,3 +89,15 @@
 .position-ab {
   position: absolute !important;
 }
+
+.hide-element {
+  // display: none !important;
+  width: 0 !important;
+  & > * {
+    visibility: hidden;
+    pointer-events: none;
+    opacity: 0;
+  }
+  opacity: 0;
+  pointer-events: none;
+}
