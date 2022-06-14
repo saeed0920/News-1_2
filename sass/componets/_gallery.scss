@@ -17,13 +17,38 @@
     grid-column: col-start 1 / col-end 3;
   }
 
+  @include res(1100) {
+    display: grid;
+    grid-template-columns: 1fr 3fr 4fr 3fr 1fr;
+    align-items: center;
+  }
+
   &__btn {
+    @include res(1100) {
+      align-self: flex-start;
+    }
   }
 
   &-container {
     position: relative;
+    @include res(1100) {
+      grid-column: 1 / 6;
+      position: unset;
+      display: flex;
+      width: 100%;
+      align-self: flex-start;
+      justify-content: center;
+    }
+
+    @include res(500) {
+      align-items: center;
+      flex-direction: column;
+    }
     & > *:hover ~ *:not(:hover) {
       transform: scale(0.9);
+      @include res(1100) {
+        transform: unset;
+      }
     }
     & > * {
       transition: all 0.2s;
@@ -31,6 +56,12 @@
       position: absolute;
       width: 30%;
       box-shadow: $box-shadow-def;
+      @include res(500) {
+        width: 40%;
+      }
+      @include res(1100) {
+        position: unset;
+      }
       &:hover {
         transform: scale(1.1) translateY(-3px);
         outline: 1rem rgba($color-green, 0.7) solid;
@@ -44,16 +75,31 @@
       left: 27%;
       top: 24rem;
       z-index: 2;
+      @include res(1100) {
+        z-index: 3;
+        left: unset;
+        top: unset;
+      }
     }
     &-2 {
       z-index: 3;
       right: 23%;
       top: 14rem;
+      @include res(1100) {
+        z-index: 4;
+        left: unset;
+        top: unset;
+      }
     }
     &-3 {
       z-index: 4;
       top: 2rem;
       left: 43rem;
+      @include res(1100) {
+        z-index: 3;
+        left: unset;
+        top: unset;
+      }
     }
   }
 }

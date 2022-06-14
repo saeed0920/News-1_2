@@ -382,16 +382,45 @@ big-desktop
     .gallery {
       grid-row: col-start 5 / col-end 5;
       grid-column: col-start 1 / col-end 3; } }
+  @media only screen and (max-width: 68.75em) {
+    .gallery {
+      display: grid;
+      grid-template-columns: 1fr 3fr 4fr 3fr 1fr;
+      align-items: center; } }
+  @media only screen and (max-width: 68.75em) {
+    .gallery__btn {
+      align-self: flex-start; } }
   .gallery-container {
     position: relative; }
+    @media only screen and (max-width: 68.75em) {
+      .gallery-container {
+        grid-column: 1 / 6;
+        position: unset;
+        display: flex;
+        width: 100%;
+        align-self: flex-start;
+        justify-content: center; } }
+    @media only screen and (max-width: 31.25em) {
+      .gallery-container {
+        align-items: center;
+        flex-direction: column; } }
     .gallery-container > *:hover ~ *:not(:hover) {
       transform: scale(0.9); }
+      @media only screen and (max-width: 68.75em) {
+        .gallery-container > *:hover ~ *:not(:hover) {
+          transform: unset; } }
     .gallery-container > * {
       transition: all 0.2s;
       outline-offset: 0.6rem;
       position: absolute;
       width: 30%;
       box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15); }
+      @media only screen and (max-width: 31.25em) {
+        .gallery-container > * {
+          width: 40%; } }
+      @media only screen and (max-width: 68.75em) {
+        .gallery-container > * {
+          position: unset; } }
       .gallery-container > *:hover {
         transform: scale(1.1) translateY(-3px);
         outline: 1rem rgba(122, 32, 72, 0.7) solid;
@@ -402,14 +431,29 @@ big-desktop
       left: 27%;
       top: 24rem;
       z-index: 2; }
+      @media only screen and (max-width: 68.75em) {
+        .gallery-container-1 {
+          z-index: 3;
+          left: unset;
+          top: unset; } }
     .gallery-container-2 {
       z-index: 3;
       right: 23%;
       top: 14rem; }
+      @media only screen and (max-width: 68.75em) {
+        .gallery-container-2 {
+          z-index: 4;
+          left: unset;
+          top: unset; } }
     .gallery-container-3 {
       z-index: 4;
       top: 2rem;
       left: 43rem; }
+      @media only screen and (max-width: 68.75em) {
+        .gallery-container-3 {
+          z-index: 3;
+          left: unset;
+          top: unset; } }
 
 /* animation */
 .main-page {
